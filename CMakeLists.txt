@@ -70,4 +70,4 @@ install(TARGETS ${PROJECT_NAME}
 
 # Install headers
 install(FILES include/serial/serial.h include/serial/v8stdint.h
-  DESTINATION ${CMAKE_INSTALL_PREFIX}/serial)
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/include/serial)
