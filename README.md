@@ -1,37 +1,20 @@
-# Serial Communication Library
+# serial
 
-[![Build Status](https://travis-ci.org/wjwwood/serial.svg?branch=master)](https://travis-ci.org/wjwwood/serial)*(Linux and OS X)* [![Build Status](https://ci.appveyor.com/api/projects/status/github/wjwwood/serial)](https://ci.appveyor.com/project/wjwwood/serial)*(Windows)*
+This is a cross-platform library for interfacing with RS-232 serial-like ports written in C++. It provides a modern C++ interface with a workflow designed to look and feel like PySerial, but with the speed and control provided by C++.
 
-This is a cross-platform library for interfacing with rs-232 serial like ports written in C++. It provides a modern C++ interface with a workflow designed to look and feel like PySerial, but with the speed and control provided by C++. 
+This library can be built and installed to the OS like most UNIX libraries with `make` and then `sudo make install`.
 
-This library is in use in several robotics related projects and can be built and installed to the OS like most unix libraries with make and then sudo make install, but because it is a catkin project it can also be built along side other catkin projects in a catkin workspace.
+`Serial` is a class that provides the basic interface common to serial libraries (`open`, `close`, `read`, `write`, etc..) and requires no extra dependencies. It also provides tight control over timeouts and control over handshaking lines.
 
-Serial is a class that provides the basic interface common to serial libraries (open, close, read, write, etc..) and requires no extra dependencies. It also provides tight control over timeouts and control over handshaking lines. 
+## Changes to the original version
 
-### Documentation
+**This is a fork of [`wjwwood/serial`](https://github.com/wjwwood/serial) maintained by [`dotX-Automation`](https://github.com/dotX-Automation).**
 
-Website: http://wjwwood.github.io/serial/
+This software is republished retaining the original license and liability disclaimers. The original software is provided as is and without any warranty. All the authors are not responsible for any issues arising from the use of this software.
 
-API Documentation: http://wjwwood.github.io/serial/doc/1.1.0/index.html
+This version is mainly aimed towards UNIX systems, development on Visual Studio Code, and system-wide installations with Make and CMake. Many original features may have been removed, deprecated, or commented out.
 
-### Dependencies
-
-Required:
-* [catkin](http://www.ros.org/wiki/catkin) - cmake and Python based buildsystem
-* [cmake](http://www.cmake.org) - buildsystem
-* [Python](http://www.python.org) - scripting language
-  * [empy](http://www.alcyone.com/pyos/empy/) - Python templating library
-  * [catkin_pkg](http://pypi.python.org/pypi/catkin_pkg/) - Runtime Python library for catkin
-
-Optional (for documentation):
-* [Doxygen](http://www.doxygen.org/) - Documentation generation tool
-* [graphviz](http://www.graphviz.org/) - Graph visualization software
-
-### Install
-
-Get the code:
-
-    git clone https://github.com/wjwwood/serial.git
+## Installation
 
 Build:
 
@@ -41,23 +24,18 @@ Build and run the tests:
 
     make test
 
-Build the documentation:
-
-    make doc
-
 Install:
 
     make install
 
-### License
+You may have to run `sudo ldconfig` afterwards.
 
-[The MIT License](LICENSE)
+## License and authors
 
-### Authors
+[MIT License](LICENSE)
+
+Roberto Masocco <r.masocco@dotxautomation.com>
 
 William Woodall <wjwwood@gmail.com>
+
 John Harrison <ash.gti@gmail.com>
-
-### Contact
-
-William Woodall <william@osrfoundation.org>

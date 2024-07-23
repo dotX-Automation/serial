@@ -1,4 +1,6 @@
 .*
+!.vscode/
+!.vscode/.gitignore
 .DS_Store
 *.coverage
 *.egg-info
@@ -11,6 +13,7 @@
 */tmp/*
 *.hwm*
 *.cfg
+!uncrustify.cfg
 *.out
 .svn
 build
